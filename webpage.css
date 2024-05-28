@@ -212,7 +212,7 @@ ul{
 }
 
 .Background{/*to apply a background image in the main body/content area*/
-    background-image: url(media/images/Background-image.jpg);
+    background-image: url(images/Background-image.jpg);
     background-repeat: repeat;
     background-position: center;
     background-size:  cover;
