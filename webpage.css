@@ -211,8 +211,9 @@ ul{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.Background{/*to apply a background image in the main body/content area*/
-    background-image: url(images/Background-image.jpg);
+
+body{
+    background-image: url(images/Background-image.jpg);/*to apply a background image in the main body/content area*/
     background-repeat: repeat;
     background-position: center;
     background-size:  cover;
