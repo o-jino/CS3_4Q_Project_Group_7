@@ -34,7 +34,7 @@ function outputinfo() {
     
 
     //open the second page
-    window.location.href = "about.html";
+    window.location.href = "About.html";
 
 
 }
