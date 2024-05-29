@@ -89,3 +89,23 @@ nav {
     margin-left: 1.5vw;
     border-radius: 100px;
 }
+#usernameError{
+    font-size: x-small;
+    color: red;
+}
+#username2Error{
+    font-size: x-small;
+    color: red;
+}
+#passwordError{
+    font-size: x-small;
+    color: red;
+}
+#emailError{
+    font-size: x-small;
+    color: red;
+}
+#interestError{
+    font-size: x-small;
+    color: red;
+}

@@ -8,17 +8,27 @@ html {
     padding: 0;
 }
 
+
 nav {
-    width: 100%;
-    height: 10vh;
-
-    background-color: #0a2c57;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    z-index: 99;
+        width: 1890px;;
+        height: 10vh;
+        background-color: #0a2c57;
+        display: flex;
+        align-items: center;
+        position: initial;
+        z-index: 99;
 }
-
+#outputfieldset{
+    width: 50vw;
+    height: 50vh;
+    margin-left: 25vw;
+    background-color: black;
+    color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    opacity: 90%;
+    border-color: rgb(255, 255, 255);
+}
 #filler_nav {
     height: 10vh;
     width: 100%;
@@ -138,7 +148,12 @@ ul{
     background-color: #ffffff;
     transition: 0.5s;
 }
-
+#accountH1{
+    color: #ffffff;
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 50px;
+}
 
 .Options:hover .Home-Page {
     color: #0a2c57;
@@ -159,6 +174,34 @@ ul{
 
 .content:hover a {
     color: #0a2c57;
+}
+footer{
+    background-color:#0a2c57;
+    position: fixed;
+    bottom: 0%;
+    height: 68px;
+    width: 1890px;
+    color: #e7e7e7;
+    display: inline-block;
+}
+
+.icon{
+    background: url(images/sprite3.png ) no-repeat;
+    width: 66px;
+    height: 66px;
+    float: right;
+}
+#T{
+    background-position: -141px -221px;  
+}
+#F{
+    background-position: -439px -146px;
+}
+#Be{
+    background-position: -141px -72px;
+}
+#V{
+    background-position: -587px -221px;
 }
 
 @keyframes hovering {
@@ -211,15 +254,15 @@ ul{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-body{
-    background-image: url(images/Background-image.jpg);/*to apply a background image in the main body/content area*/
+body{/*to apply a background image in the main body/content area*/
+    background-image: url(images/Background-image.jpg);
     background-repeat: repeat;
     background-position: center;
     background-size:  cover;
     width: 99vw;
     height: 230vh;
 }
+
 #background-Page {
     display: flex;
     justify-content:center;

@@ -19,157 +19,45 @@
       </nav>
     <form id="login">
         <fieldset id="fieldset1" form="login">
-            <legend id="legendtitle"> LOGIN TO JINOTUBE</legend><br><br>
+            <legend id="legendtitle"> POLAR PROJECT LOGIN</legend><br><br>
 
-                <label for= "username"> Enter name:</label>
-                <input type="text" id="username" name="username" onblur='onblur1()'><br><br>
-                <label for= "username2"> Enter Prefered username: </label>
-                <input type="text" id="username2" name="username2" onblur='onblur2()'><br><br>
+                <label for= "username">* Enter First name:</label>
+                <input type="text" id="username" name="username" onblur='onblur1()'>
+                <span id="usernameError" class="error"></span><br><br>
 
-                <label for= "gender"> Select Gender:</label>
+                <label for= "username2">* Enter Last name: </label>
+                <input type="text" id="username2" name="username2" onblur='onblur2()'>
+                <span id="username2Error" class="error"></span><br><br>
+
+                <label for= "gender">* Select Gender:</label>
                 <select name="usergender" id="gender" onblur='selectonblur()'><br><br>
                 <option value="male"> male </option>
                 <option value="female"> female </option>
                 <option value="PFNT"> Prefer not to say </option>
+                
                 </select><br><br>
 
-                <label for= "email"> Enter Your Email Address: </label>
-                <input type="email" id="email" name="email" onblur='onblur3()'><br><br>
+                <label for= "email">* Enter Your Email Address: </label>
+                <input type="email" id="email" name="email" onblur='onblur3()'>
+                <span id="emailError" class="error"></span><br><br>
 
-                <label for= "password"> Enter Your Password: </label>
-                <input type="password" id="password" name="password" onblur='onblur4()'><br><br>
+                <label for= "password">* Enter Your Password: </label>
+                <input type="password" id="password" name="password" onblur='onblur4()'>
+                <span id="passwordError" class="error"></span><br><br>
 
-                <label for= "Address"> Enter Home Address: </label>
-                <input type="text" id="HomeAddress" name="HomeAddress"  onblur='onblur5()'><br><br><br><br>
+                <label for= "Number"> Enter Contact Number: </label>
+                <input type="text" id="Numberz" name="Numberz"  onblur='onblur5()'><br><br><br><br>
 
-                <label for= "interest"> Enter interests: </label><br><br>
-                <textarea name="interest" id="interest" cols="70" rows="7" onblur='onblur6()'></textarea><br><br>
+                <label for= "interest">* Why Do You Want To Join Our Campaign: </label><br><br>
+                <textarea name="interest" id="interest" cols="70" rows="7" onblur='onblur6()'></textarea><br>
+                <span id="interestError" class="error"></span><br><br>
 
                 <input onclick="outputinfo()" type="submit" value="Submit" id="end">
                 <input onclick="resetinfo()" type="reset" value="reset" id="end">
-                <a class="Home-Page" href="webpage.html">HOME PAGE</a>
 
-        </fieldset>
-        <fieldset id="outputfieldset" form="text">
-            <legend>User Login Output:</legend> <br> 
-            <div id="outputname"></div> <br> 
-            <div id="outputusername"></div> <br> 
-            <div id="outputgender"></div> <br> 
-            <div id="outputEmail"></div> <br> 
-            <div id="outputpassword"></div> <br> 
-            <div id="outputAddress"></div> <br> 
-            <div id="outputinterest"></div> <br> 
         </fieldset>
     </form>
 </body>
-<script>
-       function outputinfo(){
-        var N=document.getElementById("username").value;
-        var U=document.getElementById("username2").value;
-        var P=document.getElementById("password").value;
-        var E=document.getElementById("email").value;
-        var A=document.getElementById("HomeAddress").value;
-        var I=document.getElementById("interest").value;
-        var G=document.getElementById("gender").value;
-
-        switch(G){
-            case "PFNT":
-                G="preferred not to be stated";
-                break;
-            case "male":
-                G="male"
-                break;
-            case "female":
-                G="female"
-                break;
-            default:
-                G=""
-                break;
-        }
-
-        document.getElementById("outputname").innerText = "User Name is: " + N;
-        document.getElementById("outputusername").innerText = "User Username is: " + U;
-        document.getElementById("outputgender").innerText = "User Gender is: " + G;
-        document.getElementById("outputpassword").innerText = "User Password is: " + P;
-        document.getElementById("outputEmail").innerHTML = "User Email is: " + E;
-        document.getElementById("outputAddress").innerText = "User Address is: " + A;
-        document.getElementById("outputinterest").innerText = 'User interests are: \n' + I;
-    }
-    function resetinfo(){
-        var R=""
-        document.getElementById("outputname").innerText=R;
-        document.getElementById("outputgender").innerText=R;
-        document.getElementById("outputusername").innerText=R;
-        document.getElementById("outputpassword").innerText=R;
-        document.getElementById("outputEmail").innerText=R;
-        document.getElementById("outputAddress").innerText=R;
-        document.getElementById("outputinterest").innerText=R;
-        
-    }
-
-function onblur1(){
-    var x = document.getElementById("username").value;
-    if (x == ""){
-        username.style.borderColor = "red";
-    }
-    else{
-        username.style.borderColor = "lightgreen";
-    }
-}
-function onblur2(){
-    var x = document.getElementById("username2").value;
-    if (x == ""){
-        username2.style.borderColor = "red";
-    }
-    else{
-        username2.style.borderColor = "lightgreen";
-    }
-}
-function onblur3(){
-    var x = document.getElementById("email").value;
-    if (x == ""){
-        email.style.borderColor = "red";
-    }
-    else{
-        email.style.borderColor = "lightgreen";
-    }
-}
-function onblur4(){
-    var x = document.getElementById("password").value;
-    if (x == ""){
-        password.style.borderColor = "red";
-    }
-    else{
-        password.style.borderColor = "lightgreen";
-    }
-}
-function onblur5(){
-    var x = document.getElementById("HomeAddress").value;
-    if (x == ""){
-        HomeAddress.style.borderColor = "red";
-    }
-    else{
-        HomeAddress.style.borderColor = "lightgreen";
-    }
-}
-function onblur6(){
-    var x = document.getElementById("interest").value;
-    if (x == ""){
-        interest.style.borderColor = "red";
-    }
-    else{
-        interest.style.borderColor = "lightgreen";
-    }
-}
-function selectonblur(){
-    var x=document.getElementById("gender").value;
-    if (x == ""){
-        gender.style.borderColor = "red";
-    }
-    else{
-        gender.style.borderColor = "lightgreen";
-    }
-}
- </script>
+<script src="java.js"></script>
 
 </html>               
